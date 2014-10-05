@@ -25,6 +25,9 @@
 
 - (void)viewDidLoad
 {
+    self.name.delegate = self;
+    self.date.delegate = self;
+    
     self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.0];
     self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
@@ -105,6 +108,10 @@
     [self removeAnimate];
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning
 {

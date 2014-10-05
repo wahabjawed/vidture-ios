@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "docShow.h"
 
-@interface thirdPopUp : UIViewController
+@interface thirdPopUp : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
 @property (weak, nonatomic) IBOutlet UITextField *name;

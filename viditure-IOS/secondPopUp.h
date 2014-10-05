@@ -11,9 +11,7 @@
 #import "AppDelegate.h"
 #import "thirdPopUp.h"
 
-@interface secondPopUp : UIViewController{
-    IBOutlet UIView *canvasView;
-}
+@interface secondPopUp : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
 

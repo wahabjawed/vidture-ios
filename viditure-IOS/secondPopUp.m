@@ -32,6 +32,8 @@
 
 - (void)viewDidLoad
 {
+    self.Date.delegate = self;
+    
     self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:self.alphaValue];
     self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
@@ -122,6 +124,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)clear:(id)sender
