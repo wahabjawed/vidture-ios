@@ -236,7 +236,7 @@
                                     <navigationItem title="Test Camera" id="5mY-V1-PyL">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Eax-6F-0np">
                                             <connections>
-                                                <segue destination="Wf4-lZ-Rb7" kind="modal" id="X92-1u-pKE"/>
+                                                <action selector="backTime:" destination="FSW-Yh-ee7" id="9DX-XP-4LJ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="4702" y="-529"/>
         </scene>
-        <!--Cam View Controller - Record Video-->
+        <!--Video Recording - Record Video-->
         <scene sceneID="STz-YF-Gj2">
             <objects>
-                <viewController id="e8D-9L-rb8" customClass="AVCamViewController" sceneMemberID="viewController">
+                <viewController id="e8D-9L-rb8" customClass="videoRecording" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sh7-5w-wAK"/>
                         <viewControllerLayoutGuide type="bottom" id="vTn-B2-Gq9"/>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="4702" y="148"/>
         </scene>
-        <!--View Controller - Play-->
+        <!--Video Playing - Play-->
         <scene sceneID="KcZ-Xn-lfv">
             <objects>
-                <viewController id="erY-ZP-RNH" sceneMemberID="viewController">
+                <viewController id="erY-ZP-RNH" customClass="videoPlaying" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oaD-RS-mT6"/>
                         <viewControllerLayoutGuide type="bottom" id="cfZ-WN-iVi"/>

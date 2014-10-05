@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Nikos Maounis. All rights reserved.
 //
 
-#import "PopUpViewController.h"
+#import "FirstPopUp.h"
 
-@interface PopUpViewController (){
+@interface FirstPopUp (){
     secondPopUp *second;
     thirdPopUp *third;
 }
 
 @end
 
-@implementation PopUpViewController
+@implementation FirstPopUp
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad
 {
-    
     self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
     self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
@@ -43,9 +42,11 @@
     
     self.name.layer.borderColor= border_color;
     self.name.layer.borderWidth= 1.0f;
+    self.name.delegate = self;
     
+    originalCenter = self.popUpView.center;
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  
 }
 
 - (void)showAnimate
@@ -81,7 +82,7 @@
 }
 
 
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated
+- (void)showInView:(UIView *)aView animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(), ^{
     [aView addSubview:self.view];
@@ -93,9 +94,8 @@
 
 - (IBAction)callThirdPopUp:(id)sender {
     third = [[thirdPopUp alloc] initWithNibName:@"Third" bundle:nil];
-    [third setTitle:@"This is a popup view"];
     //third.mydate = self.Date.text;
-    [third showInView:self.view withMessage:@"You just triggered a great popup window" animated:YES];
+    [third showInView:self.view animated:YES];
 
 }
 
@@ -112,8 +112,23 @@
 - (IBAction)eSignature:(id)sender {
     second = [[secondPopUp alloc] initWithNibName:@"Second" bundle:nil];
     second.alphaValue = 0.0f;
-    [second setTitle:@"This is a popup view"];
     //third.mydate = self.Date.text;
-    [second showInView:self.view withMessage:@"You just triggered a great popup window" animated:YES];
+    [second showInView:self.view animated:YES];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+        self.popUpView.center = CGPointMake(originalCenter.x, originalCenter.y+50);
+    return YES;
+}
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    NSLog(@"textViewShouldBeginEditing:");
+    return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    
+    self.popUpView.center = CGPointMake(originalCenter.x, originalCenter.y-50);
 }
 @end

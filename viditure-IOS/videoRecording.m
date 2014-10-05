@@ -45,17 +45,16 @@
  
  */
 
-#import "AVCamViewController.h"
-
+#import "VideoRecording.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-
 #import "AVCamPreviewView.h"
+
 
 static void * RecordingContext = &RecordingContext;
 static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDeviceAuthorizedContext;
 
-@interface AVCamViewController () <AVCaptureFileOutputRecordingDelegate>
+@interface videoRecording () <AVCaptureFileOutputRecordingDelegate>
 
 // For use in the storyboards.
 @property (weak, nonatomic) IBOutlet AVCamPreviewView *previewView;
@@ -77,7 +76,8 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 
 @end
 
-@implementation AVCamViewController
+@implementation videoRecording
+double timeToStop;
 
 - (BOOL)isSessionRunningAndDeviceAuthorized
 {
@@ -92,7 +92,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
+    
 	// Create the AVCaptureSession
 	AVCaptureSession *session = [[AVCaptureSession alloc] init];
 	[self setSession:session];
@@ -115,7 +115,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 		
 		NSError *error = nil;
 		
-		AVCaptureDevice *videoDevice = [AVCamViewController deviceWithMediaType:AVMediaTypeVideo preferringPosition:AVCaptureDevicePositionFront];
+		AVCaptureDevice *videoDevice = [videoRecording deviceWithMediaType:AVMediaTypeVideo preferringPosition:AVCaptureDevicePositionFront];
 		AVCaptureDeviceInput *videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
 		
 		if (error)
@@ -171,9 +171,9 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 		[self addObserver:self forKeyPath:@"movieFileOutput.recording" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:RecordingContext];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(subjectAreaDidChange:) name:AVCaptureDeviceSubjectAreaDidChangeNotification object:[[self videoDeviceInput] device]];
 		
-		__weak AVCamViewController *weakSelf = self;
+		__weak videoRecording *weakSelf = self;
 		[self setRuntimeErrorHandlingObserver:[[NSNotificationCenter defaultCenter] addObserverForName:AVCaptureSessionRuntimeErrorNotification object:[self session] queue:nil usingBlock:^(NSNotification *note) {
-			AVCamViewController *strongSelf = weakSelf;
+			videoRecording *strongSelf = weakSelf;
 			dispatch_async([strongSelf sessionQueue], ^{
 				// Manually restarting the session since it must have been stopped due to an error.
 				[[strongSelf session] startRunning];
@@ -396,8 +396,10 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 
 - (IBAction)toggleMovieRecording:(id)sender {
     [[self recordButton] setEnabled:NO];
+    
+	[self whenToStopVideo];
 	
-	dispatch_async([self sessionQueue], ^{
+    dispatch_async([self sessionQueue], ^{
 		if (![[self movieFileOutput] isRecording])
 		{
 			[self setLockInterfaceRotation:YES];
@@ -412,7 +414,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 			[[[self movieFileOutput] connectionWithMediaType:AVMediaTypeVideo] setVideoOrientation:[[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] videoOrientation]];
 			
 			// Turning OFF flash for video recording
-			[AVCamViewController setFlashMode:AVCaptureFlashModeOff forDevice:[[self videoDeviceInput] device]];
+			[videoRecording setFlashMode:AVCaptureFlashModeOff forDevice:[[self videoDeviceInput] device]];
 			
 			// Start recording to a temporary file.
 			NSString *outputFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[@"movie" stringByAppendingPathExtension:@"mov"]];
@@ -426,10 +428,19 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 }
 - (IBAction)Back:(id)sender {
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"camera_time"];
-    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:vc animated:YES completion:nil];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void)whenToStopVideo{
+    
+    timeToStop = 8.0f;
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, timeToStop * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        [[self movieFileOutput] stopRecording];
+        
+    });
+}
+
 @end

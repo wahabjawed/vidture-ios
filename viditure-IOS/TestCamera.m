@@ -48,7 +48,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
+    
 	// Create the AVCaptureSession
     
 	AVCaptureSession *session = [[AVCaptureSession alloc] init];
@@ -302,7 +302,10 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     second.alphaValue = 0.6f;
     [second setTitle:@"This is a popup view"];
     //third.mydate = self.Date.text;
-    [second showInView:self.view withMessage:@"You just triggered a great popup window" animated:YES];
+    [second showInView:self.view animated:YES];
 
+}
+- (IBAction)backTime:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

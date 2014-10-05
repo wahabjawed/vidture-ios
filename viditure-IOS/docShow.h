@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PopUpViewController.h"
+#import "FirstPopUp.h"
 @interface docShow : UIViewController<UIScrollViewDelegate , UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *start_vidturing;

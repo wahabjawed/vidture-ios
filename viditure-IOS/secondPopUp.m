@@ -57,7 +57,6 @@
         self.view.alpha = 1;
         self.view.transform = CGAffineTransformMakeScale(1, 1);
     }];
-    
 }
 
 - (void)removeAnimate
@@ -74,10 +73,25 @@
 
 - (IBAction)callThirdPopUp:(id)sender {
     
+//    UIGraphicsBeginImageContext(self.canvasView.frame.size);
+//	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+//	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//	UIGraphicsEndImageContext();
+//	UIImageWriteToSavedPhotosAlbum(viewImage, nil, nil, nil);
+    
+    UIGraphicsBeginImageContextWithOptions(self.canvasView.bounds.size, NO, 0);
+    
+    [self.canvasView drawViewHierarchyInRect:self.canvasView.bounds afterScreenUpdates:YES];
+    
+    UIImage *copied = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(copied, nil, nil, nil);
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"lastScreen"];
     vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -88,7 +102,7 @@
     }
 }
 
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated
+- (void)showInView:(UIView *)aView animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [aView addSubview:self.view];

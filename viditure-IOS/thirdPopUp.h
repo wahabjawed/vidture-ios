@@ -14,13 +14,11 @@
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *date;
-
 @property (weak,nonatomic) UIWindow *window;
 - (IBAction)next:(id)sender;
 @property (strong,nonatomic) NSString *mydate;
 
-
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated;
+- (void)showInView:(UIView *)aView animated:(BOOL)animated;
 - (IBAction)remove:(id)sender;
 
 @end

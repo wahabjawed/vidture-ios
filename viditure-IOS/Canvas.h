@@ -10,14 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 
 typedef enum {
-	DAScratchPadToolTypePaint = 0,
-	DAScratchPadToolTypeAirBrush
+	CanvasToolTypePaint = 0,
+	CanvasToolTypeAirBrush
 }
-DAScratchPadToolType;
+CanvasToolType;
 
 @interface Canvas : UIControl
 
-@property (assign) DAScratchPadToolType toolType;
+@property (assign) CanvasToolType toolType;
 @property (strong,nonatomic) UIColor* drawColor;
 @property (assign) CGFloat drawWidth;
 @property (assign) CGFloat drawOpacity;

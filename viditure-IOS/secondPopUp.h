@@ -11,17 +11,18 @@
 #import "AppDelegate.h"
 #import "thirdPopUp.h"
 
-@interface secondPopUp : UIViewController
+@interface secondPopUp : UIViewController{
+    IBOutlet UIView *canvasView;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
 
 - (IBAction)callThirdPopUp:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *Date;
 @property (readwrite, nonatomic) float alphaValue;
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated;
+- (void)showInView:(UIView *)aView animated:(BOOL)animated;
 
 - (IBAction)remove:(id)sender;
-
-
+@property (weak, nonatomic) IBOutlet UIView *canvasView;
 
 @end

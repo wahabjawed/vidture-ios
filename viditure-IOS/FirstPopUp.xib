@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstPopUp">
             <connections>
                 <outlet property="name" destination="PLE-fx-1GH" id="RSa-Ab-jtm"/>
                 <outlet property="popUpView" destination="Pon-Sf-YGC" id="vBt-QN-ghm"/>

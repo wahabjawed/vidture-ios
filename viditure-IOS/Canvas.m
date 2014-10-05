@@ -25,7 +25,7 @@
 
 - (void) initCommon
 {
-	_toolType = DAScratchPadToolTypePaint;
+	_toolType = CanvasToolTypePaint;
 	_drawColor = [UIColor blackColor];
 	_drawWidth = 1.0f;
 	_drawOpacity = 1.0f;
@@ -130,7 +130,7 @@
 	lastPoint = [touch locationInView:self];
 	lastPoint.y = self.frame.size.height - lastPoint.y;
 	
-	if (self.toolType == DAScratchPadToolTypePaint) {
+	if (self.toolType == CanvasToolTypePaint) {
 		[self paintTouchesBegan];
 	}
 
@@ -147,7 +147,7 @@
 	currentPoint = [touch locationInView:self];
 	currentPoint.y = self.frame.size.height - currentPoint.y;
 
-	if (self.toolType == DAScratchPadToolTypePaint) {
+	if (self.toolType == CanvasToolTypePaint) {
 		[self paintTouchesMoved];
 	}
 
@@ -161,7 +161,7 @@
 		return;
 	}
 	
-	if (self.toolType == DAScratchPadToolTypePaint) {
+	if (self.toolType == CanvasToolTypePaint) {
 		[self paintTouchesEnded];
 	}
 }

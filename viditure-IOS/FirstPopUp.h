@@ -11,14 +11,15 @@
 #import "AppDelegate.h"
 #import "secondPopUp.h"
 
-@interface PopUpViewController : UIViewController
+@interface FirstPopUp : UIViewController<UITextFieldDelegate>{
+    CGPoint originalCenter;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated;
+- (void)showInView:(UIView *)aView animated:(BOOL)animated;
 - (IBAction)callThirdPopUp:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 - (IBAction)remove:(id)sender;
 - (IBAction)eSignature:(id)sender;
-
 
 @end

@@ -37,11 +37,6 @@
 
 - (IBAction)Back:(id)sender {
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"document"];
-    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:vc animated:YES completion:nil];
-
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

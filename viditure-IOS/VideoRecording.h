@@ -1,7 +1,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVCamViewController : UIViewController
+@interface videoRecording : UIViewController
 
 - (IBAction)Back:(id)sender;
 

@@ -81,14 +81,16 @@
 }
 
 - (IBAction)next:(id)sender {
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"camera_time"];
     vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:vc animated:YES completion:nil];
     //[self.navigationController pushViewController:vc animated:YES];
+    
     }
 
-- (void)showInView:(UIView *)aView withMessage:(NSString *)message animated:(BOOL)animated
+- (void)showInView:(UIView *)aView animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [aView addSubview:self.view];

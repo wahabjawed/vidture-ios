@@ -11,5 +11,6 @@
 @interface TestCamera : UIViewController
 - (IBAction)esignature_instead:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *back;
+- (IBAction)backTime:(id)sender;
 
 @end

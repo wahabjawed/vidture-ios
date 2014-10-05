@@ -17,7 +17,6 @@ NSDictionary *greeting;
     
     // Create the NSURLConnection
     //NSString * username = [[NSUserDefaults standardUserDefaults] stringForKey:@"name"];
-    NSString * storedNumber = @"";
     //NSString *number = @"03432637576";
     
     // Posting the values of edit text field to database to query the results.

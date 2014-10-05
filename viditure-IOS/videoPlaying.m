@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Zainu Corporation. All rights reserved.
 //
 
-#import "videoTesting.h"
+#import "videoPlaying.h"
 
 
-@implementation videoTesting
+@implementation videoPlaying
 
 
 -(IBAction)playMovie:(id)sender

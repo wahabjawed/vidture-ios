@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface videoTesting : UIViewController
+@interface videoPlaying : UIViewController
 @property (strong, nonatomic) MPMoviePlayerViewController *player;
 @end

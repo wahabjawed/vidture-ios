@@ -23,12 +23,12 @@
 		DCCC8BFD19A6149900FEE79A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCC8BDF19A6149900FEE79A /* UIKit.framework */; };
 		DCCC8C0519A6149900FEE79A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCCC8C0319A6149900FEE79A /* InfoPlist.strings */; };
 		DCCC8C0719A6149900FEE79A /* viditure_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C0619A6149900FEE79A /* viditure_IOSTests.m */; };
-		DCCC8C1219A6165200FEE79A /* videoTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1119A6165200FEE79A /* videoTesting.m */; };
+		DCCC8C1219A6165200FEE79A /* videoPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1119A6165200FEE79A /* videoPlaying.m */; };
 		DCCC8C2619A6167100FEE79A /* docShow.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1419A6167100FEE79A /* docShow.m */; };
 		DCCC8C2719A6167100FEE79A /* Documents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1619A6167100FEE79A /* Documents.m */; };
 		DCCC8C2819A6167100FEE79A /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1819A6167100FEE79A /* Login.m */; };
-		DCCC8C2919A6167100FEE79A /* PopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1A19A6167100FEE79A /* PopUpViewController.m */; };
-		DCCC8C2A19A6167100FEE79A /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCC8C1B19A6167100FEE79A /* PopUpViewController.xib */; };
+		DCCC8C2919A6167100FEE79A /* FirstPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1A19A6167100FEE79A /* FirstPopUp.m */; };
+		DCCC8C2A19A6167100FEE79A /* FirstPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCC8C1B19A6167100FEE79A /* FirstPopUp.xib */; };
 		DCCC8C2B19A6167100FEE79A /* Register.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C1D19A6167100FEE79A /* Register.m */; };
 		DCCC8C2C19A6167100FEE79A /* Second.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCC8C1E19A6167100FEE79A /* Second.xib */; };
 		DCCC8C2D19A6167100FEE79A /* secondPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C2019A6167100FEE79A /* secondPopUp.m */; };
@@ -36,7 +36,7 @@
 		DCCC8C2F19A6167100FEE79A /* Third.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCC8C2319A6167100FEE79A /* Third.xib */; };
 		DCCC8C3019A6167100FEE79A /* thirdPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C2519A6167100FEE79A /* thirdPopUp.m */; };
 		DCCC8C3519A6171400FEE79A /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C3219A6171400FEE79A /* AVCamPreviewView.m */; };
-		DCCC8C3619A6171400FEE79A /* AVCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C3419A6171400FEE79A /* AVCamViewController.m */; };
+		DCCC8C3619A6171400FEE79A /* videoRecording.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCC8C3419A6171400FEE79A /* videoRecording.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,17 +74,17 @@
 		DCCC8C0219A6149900FEE79A /* viditure-IOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "viditure-IOSTests-Info.plist"; sourceTree = "<group>"; };
 		DCCC8C0419A6149900FEE79A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DCCC8C0619A6149900FEE79A /* viditure_IOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viditure_IOSTests.m; sourceTree = "<group>"; };
-		DCCC8C1019A6165200FEE79A /* videoTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoTesting.h; sourceTree = "<group>"; };
-		DCCC8C1119A6165200FEE79A /* videoTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoTesting.m; sourceTree = "<group>"; };
+		DCCC8C1019A6165200FEE79A /* videoPlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoPlaying.h; sourceTree = "<group>"; };
+		DCCC8C1119A6165200FEE79A /* videoPlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoPlaying.m; sourceTree = "<group>"; };
 		DCCC8C1319A6167100FEE79A /* docShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = docShow.h; sourceTree = "<group>"; };
 		DCCC8C1419A6167100FEE79A /* docShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = docShow.m; sourceTree = "<group>"; };
 		DCCC8C1519A6167100FEE79A /* Documents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Documents.h; sourceTree = "<group>"; };
 		DCCC8C1619A6167100FEE79A /* Documents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Documents.m; sourceTree = "<group>"; };
 		DCCC8C1719A6167100FEE79A /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		DCCC8C1819A6167100FEE79A /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
-		DCCC8C1919A6167100FEE79A /* PopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpViewController.h; sourceTree = "<group>"; };
-		DCCC8C1A19A6167100FEE79A /* PopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpViewController.m; sourceTree = "<group>"; };
-		DCCC8C1B19A6167100FEE79A /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		DCCC8C1919A6167100FEE79A /* FirstPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPopUp.h; sourceTree = "<group>"; };
+		DCCC8C1A19A6167100FEE79A /* FirstPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPopUp.m; sourceTree = "<group>"; };
+		DCCC8C1B19A6167100FEE79A /* FirstPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstPopUp.xib; sourceTree = "<group>"; };
 		DCCC8C1C19A6167100FEE79A /* Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Register.h; sourceTree = "<group>"; };
 		DCCC8C1D19A6167100FEE79A /* Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Register.m; sourceTree = "<group>"; };
 		DCCC8C1E19A6167100FEE79A /* Second.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Second.xib; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		DCCC8C2519A6167100FEE79A /* thirdPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thirdPopUp.m; sourceTree = "<group>"; };
 		DCCC8C3119A6171400FEE79A /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
 		DCCC8C3219A6171400FEE79A /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
-		DCCC8C3319A6171400FEE79A /* AVCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamViewController.h; sourceTree = "<group>"; };
-		DCCC8C3419A6171400FEE79A /* AVCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamViewController.m; sourceTree = "<group>"; };
+		DCCC8C3319A6171400FEE79A /* VideoRecording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecording.h; sourceTree = "<group>"; };
+		DCCC8C3419A6171400FEE79A /* videoRecording.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoRecording.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +161,8 @@
 				DCCC8BED19A6149900FEE79A /* Main.storyboard */,
 				19231A0D19D0394F00A91BE2 /* Canvas.h */,
 				19231A0E19D0394F00A91BE2 /* Canvas.m */,
+				DCCC8C3119A6171400FEE79A /* AVCamPreviewView.h */,
+				DCCC8C3219A6171400FEE79A /* AVCamPreviewView.m */,
 				DCCC8BEA19A6149900FEE79A /* AppDelegate.h */,
 				DCCC8BEB19A6149900FEE79A /* AppDelegate.m */,
 				19038EAC19B61206009AE3CC /* Constants.h */,
@@ -172,13 +174,11 @@
 				DCCC8C1819A6167100FEE79A /* Login.m */,
 				DCCC8C1519A6167100FEE79A /* Documents.h */,
 				DCCC8C1619A6167100FEE79A /* Documents.m */,
-				DCCC8C3119A6171400FEE79A /* AVCamPreviewView.h */,
-				DCCC8C3219A6171400FEE79A /* AVCamPreviewView.m */,
 				DCCC8C1319A6167100FEE79A /* docShow.h */,
 				DCCC8C1419A6167100FEE79A /* docShow.m */,
-				DCCC8C1919A6167100FEE79A /* PopUpViewController.h */,
-				DCCC8C1A19A6167100FEE79A /* PopUpViewController.m */,
-				DCCC8C1B19A6167100FEE79A /* PopUpViewController.xib */,
+				DCCC8C1919A6167100FEE79A /* FirstPopUp.h */,
+				DCCC8C1A19A6167100FEE79A /* FirstPopUp.m */,
+				DCCC8C1B19A6167100FEE79A /* FirstPopUp.xib */,
 				DCCC8C1F19A6167100FEE79A /* secondPopUp.h */,
 				DCCC8C2019A6167100FEE79A /* secondPopUp.m */,
 				DCCC8C1E19A6167100FEE79A /* Second.xib */,
@@ -187,10 +187,10 @@
 				DCCC8C2319A6167100FEE79A /* Third.xib */,
 				DCCC8C2119A6167100FEE79A /* TestCamera.h */,
 				DCCC8C2219A6167100FEE79A /* TestCamera.m */,
-				DCCC8C3319A6171400FEE79A /* AVCamViewController.h */,
-				DCCC8C3419A6171400FEE79A /* AVCamViewController.m */,
-				DCCC8C1019A6165200FEE79A /* videoTesting.h */,
-				DCCC8C1119A6165200FEE79A /* videoTesting.m */,
+				DCCC8C3319A6171400FEE79A /* VideoRecording.h */,
+				DCCC8C3419A6171400FEE79A /* videoRecording.m */,
+				DCCC8C1019A6165200FEE79A /* videoPlaying.h */,
+				DCCC8C1119A6165200FEE79A /* videoPlaying.m */,
 				199A911119D1ABE20019BEC0 /* LastScreen.h */,
 				199A911219D1ABE20019BEC0 /* LastScreen.m */,
 				DCCC8BF319A6149900FEE79A /* Images.xcassets */,
@@ -309,7 +309,7 @@
 				DCCC8BEF19A6149900FEE79A /* Main.storyboard in Resources */,
 				DCCC8C2F19A6167100FEE79A /* Third.xib in Resources */,
 				DCCC8C2C19A6167100FEE79A /* Second.xib in Resources */,
-				DCCC8C2A19A6167100FEE79A /* PopUpViewController.xib in Resources */,
+				DCCC8C2A19A6167100FEE79A /* FirstPopUp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,13 +333,13 @@
 				DCCC8C3519A6171400FEE79A /* AVCamPreviewView.m in Sources */,
 				DCCC8C2B19A6167100FEE79A /* Register.m in Sources */,
 				DCCC8BEC19A6149900FEE79A /* AppDelegate.m in Sources */,
-				DCCC8C3619A6171400FEE79A /* AVCamViewController.m in Sources */,
-				DCCC8C2919A6167100FEE79A /* PopUpViewController.m in Sources */,
+				DCCC8C3619A6171400FEE79A /* videoRecording.m in Sources */,
+				DCCC8C2919A6167100FEE79A /* FirstPopUp.m in Sources */,
 				DCCC8C2819A6167100FEE79A /* Login.m in Sources */,
 				DCCC8C2D19A6167100FEE79A /* secondPopUp.m in Sources */,
 				DCCC8C2619A6167100FEE79A /* docShow.m in Sources */,
 				19231A0F19D0394F00A91BE2 /* Canvas.m in Sources */,
-				DCCC8C1219A6165200FEE79A /* videoTesting.m in Sources */,
+				DCCC8C1219A6165200FEE79A /* videoPlaying.m in Sources */,
 				DCCC8C2E19A6167100FEE79A /* TestCamera.m in Sources */,
 				19038EAB19B611BE009AE3CC /* WebService.m in Sources */,
 				DCCC8C3019A6167100FEE79A /* thirdPopUp.m in Sources */,

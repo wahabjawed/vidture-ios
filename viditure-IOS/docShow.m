@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface docShow (){
-    PopUpViewController *popUpController;
+    FirstPopUp *firstPopUp;
     UIImageView *imageView;
     UITextField *signature;
     UIView *tempView;
@@ -57,10 +57,9 @@
 
 - (IBAction)vidture_action:(id)sender {
 
-    popUpController = [[PopUpViewController alloc] initWithNibName:@"PopUpViewController" bundle:nil];
-    [popUpController setTitle:@"This is a popup view"];
+    firstPopUp = [[FirstPopUp alloc] initWithNibName:@"FirstPopUp" bundle:nil];
     
-    [popUpController showInView:self.view withMessage:@"You got f window" animated:YES];
+    [firstPopUp showInView:self.view animated:YES];
 }
 
 -(void) FetchSchoolList
